@@ -1,6 +1,3 @@
-<!-- Landing moldes  -->
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,41 +6,11 @@
 <title>Moldes de Papelería Creativa</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#fff;color:#222}
-h1,h2 {margin-bottom:10px}
-.section {padding:60px 20px;text-align:center}
-.hero {
-    background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
-    color:white;
-    padding:80px 20px;
-    text-align:center;
-    }
-.btn {
-    background:#000;
-    color:#fff;
-    padding:18px 30px;
-    display:inline-block;
-    margin-top:20px;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:8px;
-    font-size:18px;
-    }
-    .box {
-    border:1px solid #eee;
-    padding:20px;
-    margin:10px;
-    border-radius:10px;
-    }
-.flex {display:flex;flex-wrap:wrap;justify-content:center}
-.price {font-size:40px;color:#ff4d6d}
-.old {text-decoration:line-through;color:#999}
-.urgency {background:#000;color:#fff;padding:15px;font-weight:bold}
-.img-main {
-  width:100%;
-  max-width:700px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+body {
+  margin:0;
+  font-family:Arial;
+  background:#fff;
+  color:#222;
 }
 
 .section {
@@ -51,13 +18,15 @@ h1,h2 {margin-bottom:10px}
   text-align:center;
 }
 
-h1 {
-  font-size:32px;
+.hero {
+  background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
+  color:white;
+  padding:80px 20px;
+  text-align:center;
 }
 
-h2 {
-  font-size:26px;
-}
+h1 {font-size:32px;}
+h2 {font-size:26px;}
 
 p {
   font-size:18px;
@@ -80,7 +49,57 @@ p {
 .btn:hover {
   background:#ff4d6d;
 }
-    
+
+.box {
+  border:1px solid #eee;
+  padding:20px;
+  margin:10px;
+  border-radius:10px;
+  width:250px;
+}
+
+.flex {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.price {
+  font-size:40px;
+  color:#ff4d6d;
+}
+
+.old {
+  text-decoration:line-through;
+  color:#999;
+}
+
+.urgency {
+  background:#000;
+  color:#fff;
+  padding:15px;
+  font-weight:bold;
+}
+
+.img-main {
+  width:100%;
+  max-width:700px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  margin-top:20px;
+}
+
+.gallery {
+  width:250px;
+  margin:10px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.gallery:hover {
+  transform:scale(1.05);
+}
 </style>
 </head>
 
@@ -88,49 +107,68 @@ p {
 
 <!-- HERO -->
 <section class="hero">
-    <h1>🎁 Crea y vende detalles hermosos con estos moldes editables</h1>
-    <p>Sin experiencia en diseño – listos para imprimir </p>
-    <a href="#comprar" class="btn">QUIERO LOS MOLDES</a>
-    </section>
+  <h1>🎁 Empezá tu negocio de papelería hoy</h1>
+  <p>Sin experiencia, con moldes listos para vender</p>
+  <img src="https://via.placeholder.com/700x400" class="img-main">
+  <a href="#comprar" class="btn">QUIERO EMPEZAR</a>
+</section>
 
 <!-- DOLOR -->
 <section class="section">
-    <h2>❌ ¿Te pasa esto?</h2>
-    <p>No sabes que diseñar, queres emprender desde casa o necesitas ingresos extra...</p>
-    </section>
+  <h2>❌ ¿Te pasa esto?</h2>
+  <p>No sabes qué diseñar, querés emprender desde casa o necesitás ingresos extra...</p>
+</section>
 
 <!-- SOLUCION -->
 <section class="section">
-    <h2>✨ Aquí tienes la solución</h2>
-    <p>Moldes de papelería creativa listos para editar y vender</p>
-    </section>
+  <h2>✨ Esta es tu solución</h2>
+  <p>Moldes de papelería creativa listos para editar, imprimir y vender</p>
+</section>
 
-<!-- MOCKUP -->
+<!-- GALERIA -->
 <section class="section">
-    <img src="https://via.placeholder.com/700x400" width="100%">
-    </section>
+  <h2>🎨 Mira lo que puedes crear</h2>
+  <div class="flex">
+    <img src="https://via.placeholder.com/250" class="gallery">
+    <img src="https://via.placeholder.com/250" class="gallery">
+    <img src="https://via.placeholder.com/250" class="gallery">
+  </div>
+</section>
 
 <!-- BENEFICIOS -->
 <section class="section">
-    <h2>💡 Lo que podrás hacer, con estos editables </h2>
-    <div class="flex">
-        <div class="box">🎉 Crear decoraciones para cumpleaños</div>
-        <div class="box">💖 Diseñar regalos unicos de San Valentín</div>
-        <div class="box">🐰 Armar productos personalizados para  Pascua</div>
+  <h2>💡 Lo que vas a lograr</h2>
+  <div class="flex">
+    <div class="box">
+      <h3>🎉 Cumpleaños</h3>
+      <p>Decoraciones listas para vender</p>
     </div>
-    </section>
+    <div class="box">
+      <h3>💖 San Valentín</h3>
+      <p>Regalos personalizados</p>
+    </div>
+    <div class="box">
+      <h3>🐰 Pascua</h3>
+      <p>Productos listos para fechas clave</p>
+    </div>
+    <div class="box">
+      <h3>💰 Ingresos</h3>
+      <p>Empezá a vender desde casa</p>
+    </div>
+  </div>
+</section>
 
 <!-- INCLUYE -->
 <section class="section">
-    <h2>📦 ¿Qué incluye?</h2>
-    <p>
-    ✔ Cajas personalizadas<br>
-    ✔ Bolsas y packaging<br>
-    ✔ Banderines & Candys <br>
-    ✔ Diseños para fechas especiales<br>
-    ✔ Acceso inmediato
-    </p>
-    </section>
+  <h2>📦 ¿Qué incluye?</h2>
+  <p>
+  ✔ Cajas personalizadas<br>
+  ✔ Bolsas y packaging<br>
+  ✔ Banderines & candy bar<br>
+  ✔ Diseños para fechas especiales<br>
+  ✔ Acceso inmediato
+  </p>
+</section>
 
 <!-- URGENCIA -->
 <div class="urgency">
@@ -139,30 +177,38 @@ p {
 
 <!-- PRECIO -->
 <section class="section" id="comprar">
-    <h2>💰 Empeza hoy mismo</h2>
-    <p class="old">$18.000 </p>
-    <p class="price">$6.000 </p>
-    <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn">DESCARGAR AHORA</a>
-    </section>
+  <h2>💰 Empezá hoy mismo</h2>
+  <p class="old">$18.000</p>
+  <p class="price">$6.000</p>
+
+  <p>⚡ Acceso inmediato después del pago</p>
+  <p>📥 Descarga directa de todos los moldes</p>
+
+  <a href="https://mpago.la/2ErKmcc" target="_blank" rel="noopener noreferrer" class="btn">
+    DESCARGAR AHORA
+  </a>
+</section>
 
 <!-- GARANTIA -->
 <section class="section">
-    <h2>🛡 Compra sin riesgo</h2>
-    <p>Tienes 7 días de garantía</p>
-    </section>
+  <h2>🛡 Compra sin riesgo</h2>
+  <p>Tienes 7 días de garantía</p>
+</section>
 
 <!-- TESTIMONIOS -->
 <section class="section">
-    <h2>⭐ Personas que ya empezaron</h2>
-    <p>"Ahora vendo cajitas personalizadas desde casa"</p>
-    <p>"Súper fácil, no sabía diseñar y ya vendo"</p>
-    </section>
+  <h2>⭐ Personas que ya empezaron</h2>
+  <p>"Ahora vendo cajitas personalizadas desde casa"</p>
+  <p>"Súper fácil, no sabía diseñar y ya estoy vendiendo"</p>
+</section>
 
 <!-- CTA FINAL -->
 <section class="hero">
-    <h2>🚀 Empeza tu negocio hoy</h2>
-    <a href="https://mpago.la/2ErKmcc" class="btn">QUIERO EMPEZAR</a>
-    </section>
+  <h2>🚀 Empezá tu negocio hoy</h2>
+  <a href="https://mpago.la/2ErKmcc" target="_blank" rel="noopener noreferrer" class="btn">
+    QUIERO EMPEZAR
+  </a>
+</section>
 
 </body>
 </html>

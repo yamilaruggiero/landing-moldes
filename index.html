@@ -12,17 +12,42 @@ body {
   background:#fff;
   color:#222;
 }
+<style>
 
-/* HERO */
+/* HERO CON IMAGEN */
 .hero {
-  background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
-  color:white;
-  padding:100px 20px;
+  position: relative;
+  height: 90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* IMAGEN DE FONDO */
+.hero::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:url("portada.jpg") center/cover no-repeat;
+  filter: blur(6px) brightness(0.6);
+  z-index:1;
+}
+
+/* CONTENIDO */
+.hero-content {
+  position:relative;
+  z-index:2;
+  animation: fadeUp 1s ease;
 }
 
 .hero h1 {
-  font-size:36px;
+  font-size:42px;
   margin-bottom:10px;
 }
 
@@ -30,13 +55,9 @@ body {
   font-size:20px;
 }
 
-.section {
-  padding:60px 20px;
-  text-align:center;
-}
-
+/* BOTÓN */
 .btn {
-  background:#000;
+  background:#ff4d6d;
   color:#fff;
   padding:18px 30px;
   display:inline-block;
@@ -48,8 +69,20 @@ body {
 }
 
 .btn:hover {
-  background:#ff4d6d;
+  transform:scale(1.05);
+  background:#ff2e55;
 }
+
+/* ANIMACIÓN */
+@keyframes fadeUp {
+  from {
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
 
 /* CARRUSEL */
 .carousel {
@@ -166,10 +199,11 @@ body {
 
   <div class="carousel">
     <div class="carousel-track">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
+      <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg">
+      <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg">
+      <img src="ppp.jpg">
+      <img src="svdsvdvd.jpg">
+      <img src="6cd32f8d-e90e-45a9-8be8-f242cf29a0d4.jpg">
     </div>
   </div>
 

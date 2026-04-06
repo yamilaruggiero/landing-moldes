@@ -13,24 +13,26 @@ body {
   color:#222;
 }
 
-.section {
-  padding:60px 20px;
-  text-align:center;
-}
-
+/* HERO */
 .hero {
   background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
   color:white;
-  padding:80px 20px;
+  padding:100px 20px;
   text-align:center;
 }
 
-h1 {font-size:32px;}
-h2 {font-size:26px;}
+.hero h1 {
+  font-size:36px;
+  margin-bottom:10px;
+}
 
-p {
-  font-size:18px;
-  line-height:1.5;
+.hero p {
+  font-size:20px;
+}
+
+.section {
+  padding:60px 20px;
+  text-align:center;
 }
 
 .btn {
@@ -42,7 +44,6 @@ p {
   text-decoration:none;
   font-weight:bold;
   border-radius:50px;
-  font-size:18px;
   transition:0.3s;
 }
 
@@ -50,22 +51,58 @@ p {
   background:#ff4d6d;
 }
 
-.box {
-  border:1px solid #eee;
-  padding:20px;
-  margin:10px;
-  border-radius:10px;
-  width:250px;
+/* CARRUSEL */
+.carousel {
+  overflow:hidden;
+  max-width:900px;
+  margin:40px auto;
 }
 
+.carousel-track {
+  display:flex;
+  animation:slide 15s infinite;
+}
+
+.carousel img {
+  width:100%;
+  max-width:300px;
+  margin:10px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes slide {
+  0% {transform:translateX(0);}
+  25% {transform:translateX(-300px);}
+  50% {transform:translateX(-600px);}
+  75% {transform:translateX(-300px);}
+  100% {transform:translateX(0);}
+}
+
+/* BENEFICIOS */
 .flex {
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
 }
 
+.box {
+  background:#fff;
+  border-radius:15px;
+  padding:25px;
+  margin:10px;
+  width:250px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.box:hover {
+  transform:translateY(-5px);
+}
+
+/* PRECIO */
 .price {
-  font-size:40px;
+  font-size:42px;
   color:#ff4d6d;
 }
 
@@ -81,63 +118,36 @@ p {
   font-weight:bold;
 }
 
-.img-main {
-  width:100%;
-  max-width:700px;
+/* TESTIMONIOS */
+.testimonial {
+  background:#fff0f3;
+  margin:10px auto;
+  max-width:500px;
+  padding:20px;
   border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  margin-top:20px;
 }
 
-.gallery {
-  width:250px;
-  margin:10px;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-  transition:0.3s;
+/* BOTONES FLOTANTES */
+.wa-float, .ig-float {
+  position:fixed;
+  right:20px;
+  padding:15px;
+  border-radius:50%;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-.gallery:hover {
-  transform:scale(1.05);
-}
-
-/* 🔥 BOTÓN WHATSAPP (PRIORIDAD VENTA) */
 .wa-float {
-  position:fixed;
   bottom:90px;
-  right:20px;
   background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50%;
-  font-size:22px;
-  text-decoration:none;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  transition:0.3s;
 }
 
-.wa-float:hover {
-  transform:scale(1.1);
-}
-
-/* 🔥 BOTÓN INSTAGRAM */
 .ig-float {
-  position:fixed;
   bottom:20px;
-  right:20px;
   background:#E1306C;
-  color:#fff;
-  padding:15px;
-  border-radius:50%;
-  font-size:22px;
-  text-decoration:none;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  transition:0.3s;
 }
 
-.ig-float:hover {
-  transform:scale(1.1);
-}
 </style>
 </head>
 
@@ -146,31 +156,23 @@ p {
 <!-- HERO -->
 <section class="hero">
   <h1>🎁 Empezá tu negocio de papelería hoy</h1>
-  <p>Sin experiencia, con moldes listos para vender</p>
-  <img src="https://via.placeholder.com/700x400" class="img-main">
+  <p>Sin experiencia – con moldes listos para vender 💸</p>
   <a href="#comprar" class="btn">QUIERO EMPEZAR</a>
 </section>
 
-<!-- DOLOR -->
-<section class="section">
-  <h2>❌ ¿Te pasa esto?</h2>
-  <p>No sabes qué diseñar, querés emprender desde casa o necesitás ingresos extra...</p>
-</section>
-
-<!-- SOLUCION -->
-<section class="section">
-  <h2>✨ Esta es tu solución</h2>
-  <p>Moldes de papelería creativa listos para editar, imprimir y vender</p>
-</section>
-
-<!-- GALERIA -->
+<!-- CARRUSEL -->
 <section class="section">
   <h2>🎨 Mira lo que puedes crear</h2>
-  <div class="flex">
-    <img src="https://via.placeholder.com/250" class="gallery">
-    <img src="https://via.placeholder.com/250" class="gallery">
-    <img src="https://via.placeholder.com/250" class="gallery">
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="https://via.placeholder.com/300">
+      <img src="https://via.placeholder.com/300">
+      <img src="https://via.placeholder.com/300">
+      <img src="https://via.placeholder.com/300">
+    </div>
   </div>
+
 </section>
 
 <!-- BENEFICIOS -->
@@ -182,84 +184,61 @@ p {
       <p>Decoraciones listas para vender</p>
     </div>
     <div class="box">
-      <h3>💖 San Valentín</h3>
-      <p>Regalos personalizados</p>
+      <h3>💖 Regalos</h3>
+      <p>Diseños personalizados</p>
     </div>
     <div class="box">
-      <h3>🐰 Pascua</h3>
-      <p>Productos listos para fechas clave</p>
+      <h3>🐰 Fechas clave</h3>
+      <p>Productos listos todo el año</p>
     </div>
     <div class="box">
       <h3>💰 Ingresos</h3>
-      <p>Empezá a vender desde casa</p>
+      <p>Empezá desde casa</p>
     </div>
   </div>
 </section>
 
-<!-- INCLUYE -->
-<section class="section">
-  <h2>📦 ¿Qué incluye?</h2>
-  <p>
-  ✔ Cajas personalizadas<br>
-  ✔ Bolsas y packaging<br>
-  ✔ Banderines & candy bar<br>
-  ✔ Diseños para fechas especiales<br>
-  ✔ Acceso inmediato
-  </p>
-</section>
-
-<!-- URGENCIA -->
+<!-- PRECIO -->
 <div class="urgency">
 🔥 DESCUENTO SOLO POR HOY 🔥
 </div>
 
-<!-- PRECIO -->
 <section class="section" id="comprar">
   <h2>💰 Empezá hoy mismo</h2>
   <p class="old">$18.000</p>
   <p class="price">$6.000</p>
 
-  <p>⚡ Acceso inmediato después del pago</p>
-  <p>📥 Descarga directa de todos los moldes</p>
-
-  <a href="https://mpago.la/2ErKmcc" target="_blank" rel="noopener noreferrer" class="btn">
+  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn">
     DESCARGAR AHORA
   </a>
-</section>
-
-<!-- GARANTIA -->
-<section class="section">
-  <h2>🛡 Compra sin riesgo</h2>
-  <p>Tienes 7 días de garantía</p>
 </section>
 
 <!-- TESTIMONIOS -->
 <section class="section">
   <h2>⭐ Personas que ya empezaron</h2>
-  <p>"Ahora vendo cajitas personalizadas desde casa"</p>
-  <p>"Súper fácil, no sabía diseñar y ya estoy vendiendo"</p>
+
+  <div class="testimonial">
+    “Ahora vendo desde casa 💖”
+  </div>
+
+  <div class="testimonial">
+    “No sabía diseñar y ya estoy vendiendo”
+  </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="hero">
-  <h2>🚀 Empezá tu negocio hoy</h2>
-  <a href="https://mpago.la/2ErKmcc" target="_blank" rel="noopener noreferrer" class="btn">
+  <h2>🚀 Empezá hoy</h2>
+  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn">
     QUIERO EMPEZAR
   </a>
 </section>
 
-<!-- 🔥 BOTÓN WHATSAPP -->
-<a href="https://wa.me/5491151215052?text=Hola!%20Quiero%20empezar%20a%20vender%20con%20los%20moldes%20😍" 
-   target="_blank" 
-   rel="noopener noreferrer" 
-   class="wa-float">
-   💬
-</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me/5491151215052?text=Hola!%20Quiero%20empezar%20😍" class="wa-float">💬</a>
 
-<!-- 🔥 BOTÓN INSTAGRAM -->
-<a href="https://instagram.com/puntodise95" target="_blank" rel="noopener noreferrer" class="ig-float">
-📲
-</a>
+<!-- INSTAGRAM -->
+<a href="https://instagram.com/puntodise95" class="ig-float">📲</a>
 
 </body>
 </html>

@@ -7,195 +7,36 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- 🔥 META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '938325122261348');
-fbq('track', 'PageView');
-</script>
-
+<meta name="description" content="Empezá tu negocio de papelería creativa con más de 50 moldes listos para vender. Editable en Canva. Acceso inmediato.">
+<link rel="icon" href="favicon.png" sizes="32x32">
+<link rel="icon" href="favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="favicon.png">
+  
 <style>
-body {
-  margin:0;
-  font-family:'Poppins', sans-serif;
-  background:#fff;
-  color:#222;
-}
+body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
+.topbar {background:#000;color:#fff;text-align:center;padding:10px;font-size:14px;}
+.hero {position:relative;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
+.hero::before {content:"";position:absolute;width:100%;height:100%;background:url("portada.jpg") center/cover no-repeat;filter:brightness(0.5);}
+.hero-content {position:relative;z-index:2;max-width:700px;}
+.btn {background:#ff4d6d;color:#fff;padding:18px 30px;border-radius:50px;text-decoration:none;display:inline-block;margin-top:20px;font-weight:bold;transition:0.3s;}
+.btn:hover {background:#ff2e55;transform:scale(1.05);}
+.section {padding:80px 20px;text-align:center;}
+.flex {display:flex;flex-wrap:wrap;justify-content:center;}
+.box {width:250px;margin:10px;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.warning {background:#ffe5e9;padding:60px 20px;}
+.price {font-size:42px;color:#ff4d6d;}
+.old {text-decoration:line-through;color:#999;}
+.urgency {background:#000;color:#fff;padding:15px;text-align:center;}
+.countdown {font-size:22px;margin-top:10px;}
+img.mock {width:90%;max-width:400px;border-radius:15px;margin:10px;}
 
-/* TOP BAR */
-.topbar {
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:10px;
-  font-size:14px;
-}
-
-/* HERO */
-.hero {
-  position:relative;
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-}
-
-.hero::before {
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:url("portada.jpg") center/cover no-repeat;
-  filter:brightness(0.5);
-}
-
-.hero-content {
-  position:relative;
-  z-index:2;
-  max-width:700px;
-}
-
-/* BOTON */
-.btn {
-  background:#ff4d6d;
-  color:#fff;
-  padding:18px 30px;
-  border-radius:50px;
-  text-decoration:none;
-  display:inline-block;
-  margin-top:20px;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover {
-  background:#ff2e55;
-  transform:scale(1.05);
-}
-
-/* SECTION */
-.section {
-  padding:80px 20px;
-  text-align:center;
-}
-
-/* BENEFICIOS */
-.flex {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
-.box {
-  width:250px;
-  margin:10px;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  background:#fff;
-}
-
-/* WARNING */
-.warning {
-  background:#ffe5e9;
-  padding:60px 20px;
-}
-
-/* PRECIO */
-.price {
-  font-size:42px;
-  color:#ff4d6d;
-}
-
-.old {
-  text-decoration:line-through;
-  color:#999;
-}
-
-/* URGENCY */
-.urgency {
-  background:#000;
-  color:#fff;
-  padding:15px;
-  text-align:center;
-}
-
-.countdown {
-  font-size:22px;
-  margin-top:10px;
-}
-
-/* 💬 WHATSAPP TESTIMONIOS */
-.chat-container {
-  max-width:400px;
-  margin:0 auto;
-  background:#e5ddd5;
-  padding:15px;
-  border-radius:15px;
-}
-
-.chat {
-  display:none;
-}
-
-.chat.active {
-  display:block;
-}
-
-.bubble {
-  padding:10px 14px;
-  border-radius:10px;
-  margin:8px 0;
-  max-width:80%;
-  font-size:14px;
-  line-height:1.4;
-}
-
-.me {
-  background:#dcf8c6;
-  margin-left:auto;
-  text-align:left;
-}
-
-.other {
-  background:#fff;
-  margin-right:auto;
-}
-
-/* POPUP */
-.popup {
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#fff;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  display:none;
-}
-
-/* FLOAT */
-.wa-float, .ig-float {
-  position:fixed;
-  right:20px;
-  padding:15px;
-  border-radius:50%;
-  color:#fff;
-}
-
-.wa-float { bottom:90px; background:#25D366; }
-.ig-float { bottom:20px; background:#E1306C; }
-
+/* 🔥 CARRUSEL */
+.carousel {max-width:350px;margin:20px auto;}
+.slide {width:100%;border-radius:15px;display:none;}
+.slide.active {display:block;}
+.dots {text-align:center;margin-top:10px;}
+.dots span {height:10px;width:10px;margin:5px;background:#ccc;display:inline-block;border-radius:50%;cursor:pointer;}
+.dots span:hover {background:#ff4d6d;}
 </style>
 </head>
 
@@ -205,101 +46,86 @@ body {
 🚀 Empezá hoy y recuperá tu inversión en tu primera venta
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>🎁 Empezá tu negocio de papelería hoy</h1>
+    <h1>🎁 Creá tu negocio de papelería desde casa</h1>
     <p>Sin experiencia • 100% editable • Listo para vender 💸</p>
-    <p>🔥 Más de 50 moldes listos</p>
-
-    <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn"
-    onclick="fbq('track','InitiateCheckout',{value:15000,currency:'ARS'})">
-      QUIERO EMPEZAR
-    </a>
+    <a href="https://mpago.la/2ErKmcc" class="btn">QUIERO GANAR DINERO HOY</a>
   </div>
 </section>
 
-<!-- BENEFICIOS -->
+<!-- PRODUCTOS -->
 <section class="section">
-  <h2>💡 Lo que vas a lograr</h2>
-  <div class="flex">
-    <div class="box">🎉 Cumpleaños listos</div>
-    <div class="box">💖 Regalos personalizados</div>
-    <div class="box">🐰 Fechas clave</div>
-    <div class="box">💰 Generar ingresos</div>
-  </div>
+  <h2>😍 Mirá lo que podés vender</h2>
+  <p>Productos reales hechos con los moldes 💸</p>
+
+  <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg" class="mock">
+  <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg" class="mock">
+  <img src="ppp.jpg" class="mock">
+  <img src="svdsvdvd.jpg" class="mock">
 </section>
 
-<!-- WARNING -->
-<section class="warning">
-  <h2>⚠️ Si no empezás hoy...</h2>
-  <p>Otros ya están vendiendo con estos moldes 💸</p>
+<!-- INCLUYE -->
+<section class="section">
+  <h2>📦 Qué incluye</h2>
+  <p>✔ Más de 50 moldes editables</p>
+  <p>✔ Cajas personalizadas</p>
+  <p>✔ Bolsitas y etiquetas</p>
+  <p>✔ Stickers</p>
+  <p>✔ Diseños para fechas especiales</p>
+</section>
+
+<!-- OBJECIONES -->
+<section class="section">
+  <h2>🙌 No necesitás experiencia</h2>
+  <p>✔ Editable en Canva súper fácil</p>
+  <p>✔ Podés imprimir en cualquier gráfica</p>
+  <p>✔ Paso a paso incluido</p>
 </section>
 
 <!-- URGENCIA -->
 <div class="urgency">
-🔥 DESCUENTO TERMINA EN:
+🔥 OFERTA POR LANZAMIENTO
 <div class="countdown" id="timer"></div>
 </div>
 
 <!-- PRECIO -->
 <section class="section">
-  <h2>💰 Empezá hoy mismo</h2>
+  <h2>💰 Empezá hoy</h2>
   <p class="old">$30.000</p>
   <p class="price">$15.000</p>
 
   <p>✔ Acceso inmediato</p>
-  <p>✔ Editable en Canva</p>
   <p>✔ Listo para vender</p>
+  <p>✔ Editable fácil</p>
 
-  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn"
-  onclick="fbq('track','InitiateCheckout',{value:15000,currency:'ARS'})">
-    COMPRAR AHORA
-  </a>
+  <!-- 🔥 CARRUSEL -->
+  <h3>✨ Algunos moldes incluidos en el kit</h3>
+
+  <div class="carousel">
+    <img src="MOLDE1.jpg" class="slide active">
+    <img src="MOLDE2.jpg" class="slide">
+    <img src="MOLDE3.jpg" class="slide">
+
+    <div class="dots">
+      <span onclick="goToSlide(0)"></span>
+      <span onclick="goToSlide(1)"></span>
+      <span onclick="goToSlide(2)"></span>
+    </div>
+  </div>
+
+  <a href="https://mpago.la/2ErKmcc" class="btn">COMPRAR AHORA</a>
 </section>
 
-<!-- 💬 TESTIMONIOS WHATSAPP -->
+<!-- FINAL -->
 <section class="section">
-  <h2>💬 Lo que dicen nuestras clientas</h2>
+  <h2>🚀 Es tu momento</h2>
+  <p>✔ Más de 50 moldes</p>
+  <p>✔ Negocio desde casa</p>
+  <p>✔ Recuperás rápido la inversión</p>
 
-  <div class="chat-container">
-
-    <div class="chat active">
-      <div class="bubble other">Hola! esto funciona posta? 😅</div>
-      <div class="bubble me">Siii! ya hice mi primera venta 💸</div>
-      <div class="bubble me">En 2 días recuperé todo 😍</div>
-    </div>
-
-    <div class="chat">
-      <div class="bubble other">No sé diseñar nada 😭</div>
-      <div class="bubble me">Yo tampoco sabía!</div>
-      <div class="bubble me">Son re fáciles los moldes 🙌</div>
-    </div>
-
-  </div>
+  <a href="https://mpago.la/2ErKmcc" class="btn">EMPEZAR AHORA</a>
 </section>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-🔥 Alguien acaba de comprar hace 2 minutos
-</div>
-
-<!-- CTA FINAL -->
-<section class="hero">
-  <div class="hero-content">
-    <h2>🚀 Es tu momento</h2>
-    <a href="https://mpago.la/2ErKmcc" class="btn"
-    onclick="fbq('track','InitiateCheckout',{value:15000,currency:'ARS'})">
-      EMPEZAR AHORA
-    </a>
-  </div>
-</section>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/5491151215052" class="wa-float">💬</a>
-
-<!-- INSTAGRAM -->
-<a href="https://instagram.com/puntodise95" class="ig-float">📲</a>
 
 <script>
 // CONTADOR
@@ -312,20 +138,24 @@ setInterval(() => {
   time--;
 }, 1000);
 
-// TESTIMONIOS CHAT
-let chats = document.querySelectorAll(".chat");
-let i = 0;
+// CARRUSEL
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
 
 setInterval(() => {
-  chats[i].classList.remove("active");
-  i = (i + 1) % chats.length;
-  chats[i].classList.add("active");
-}, 3500);
-
-// POPUP
-setTimeout(() => {
-  document.getElementById("popup").style.display = "block";
-}, 5000);
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 3000);
 </script>
 
 </body>

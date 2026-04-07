@@ -7,6 +7,21 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+<!-- 🔥 META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '938325122261348');
+fbq('track', 'PageView');
+</script>
+
 <style>
 body {
   margin:0;
@@ -60,6 +75,7 @@ body {
   display:inline-block;
   margin-top:20px;
   font-weight:bold;
+  transition:0.3s;
 }
 
 .btn:hover {
@@ -73,20 +89,7 @@ body {
   text-align:center;
 }
 
-/* CAROUSEL */
-.carousel {
-  display:flex;
-  overflow-x:auto;
-  gap:20px;
-  padding:20px;
-}
-
-.carousel img {
-  width:250px;
-  border-radius:15px;
-}
-
-/* BOX */
+/* BENEFICIOS */
 .flex {
   display:flex;
   flex-wrap:wrap;
@@ -99,16 +102,22 @@ body {
   padding:20px;
   border-radius:15px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  background:#fff;
+  transition:0.3s;
 }
 
-/* CONTENEDOR CENTRADO */
-.center-box {
-  max-width:700px;
-  margin:0 auto;
+.box:hover {
+  transform:translateY(-5px);
+}
+
+/* WARNING */
+.warning {
+  background:#ffe5e9;
+  padding:60px 20px;
   text-align:center;
 }
 
-/* PRICE */
+/* PRECIO */
 .price {
   font-size:42px;
   color:#ff4d6d;
@@ -124,34 +133,54 @@ body {
   background:#000;
   color:#fff;
   padding:15px;
-  font-weight:bold;
   text-align:center;
 }
 
-/* TESTIMONIOS */
-.testimonial {
-  background:#fff0f3;
-  margin:20px auto;
-  max-width:500px;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.countdown {
+  font-size:22px;
+  margin-top:10px;
 }
 
-.testimonial img {
+/* TESTIMONIOS */
+.testimonial-carousel {
+  max-width:500px;
+  margin:0 auto;
+}
+
+.testimonial-slide {
+  display:none;
+}
+
+.testimonial-slide.active {
+  display:block;
+}
+
+.testimonial-slide img {
   width:100%;
   border-radius:10px;
   margin-bottom:10px;
 }
 
-/* WARNING */
-.warning {
-  background:#ffe5e9;
-  padding:60px 20px;
-  text-align:center;
+/* POPUP */
+.popup {
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  font-size:14px;
+  display:none;
+  animation:fadeIn 0.5s ease;
 }
 
-/* FLOAT BUTTONS */
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* FLOAT */
 .wa-float, .ig-float {
   position:fixed;
   right:20px;
@@ -177,8 +206,10 @@ body {
   <div class="hero-content">
     <h1>🎁 Empezá tu negocio de papelería hoy</h1>
     <p>Sin experiencia • 100% editable • Listo para vender 💸</p>
-    <p>🔥 Más de 50 moldes listos para usar</p>
-    <a href="#comprar" class="btn">QUIERO EMPEZAR A VENDER</a>
+    <p>🔥 Más de 50 moldes listos</p>
+    <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn" onclick="fbq('track','Purchase',{value:15000,currency:'ARS'})">
+      QUIERO EMPEZAR
+    </a>
   </div>
 </section>
 
@@ -186,40 +217,37 @@ body {
 <section class="section">
   <h2>💡 Lo que vas a lograr</h2>
   <div class="flex">
-    <div class="box">🎉 Cumpleaños listos para vender</div>
+    <div class="box">🎉 Cumpleaños listos</div>
     <div class="box">💖 Regalos personalizados</div>
-    <div class="box">🐰 Fechas clave todo el año</div>
-    <div class="box">💰 Generar ingresos desde casa</div>
+    <div class="box">🐰 Fechas clave</div>
+    <div class="box">💰 Generar ingresos</div>
   </div>
 </section>
 
-<!-- SECCION PSICOLOGICA -->
+<!-- WARNING -->
 <section class="warning">
-  <div class="center-box">
-    <h2>⚠️ Si no empezás hoy...</h2>
-    <p>Vas a seguir viendo ideas sin generar ingresos 😔</p>
-    <p>Mientras otras personas ya están vendiendo con estos moldes 💸</p>
-  </div>
+  <h2>⚠️ Si no empezás hoy...</h2>
+  <p>Otros ya están vendiendo con estos moldes 💸</p>
 </section>
 
 <!-- URGENCIA -->
 <div class="urgency">
-🔥 DESCUENTO SOLO POR HOY 🔥
+🔥 DESCUENTO TERMINA EN:
+<div class="countdown" id="timer"></div>
 </div>
 
 <!-- PRECIO -->
-<section class="section" id="comprar">
+<section class="section">
   <h2>💰 Empezá hoy mismo</h2>
-
   <p class="old">$30.000</p>
   <p class="price">$15.000</p>
 
   <p>✔ Acceso inmediato</p>
   <p>✔ Editable en Canva</p>
-  <p>✔ Listo para vender hoy</p>
+  <p>✔ Listo para vender</p>
 
-  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn">
-    QUIERO EMPEZAR YA
+  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn" onclick="fbq('track','Purchase',{value:15000,currency:'ARS'})">
+    COMPRAR AHORA
   </a>
 </section>
 
@@ -227,22 +255,31 @@ body {
 <section class="section">
   <h2>⭐ Resultados reales</h2>
 
-  <div class="testimonial">
-    <img src="testimonio 1.jpeg">
-    <p>“No sabía diseñar y ya vendí mi primer candy con este Kit. 💸” – Carla</p>
-  </div>
+  <div class="testimonial-carousel">
+    <div class="testimonial-slide active">
+      <img src="testimonio1.jpeg">
+      <p>“No sabía diseñar y ya vendí mi primer candy 💸” – Carla</p>
+    </div>
 
-  <div class="testimonial">
-    <img src="testimonio 2.png">
-    <p>“Hice mi primera venta en 2 dias” – Sofía</p>
+    <div class="testimonial-slide">
+      <img src="testimonio2.png">
+      <p>“Hice mi primera venta en 2 días” – Sofía</p>
+    </div>
   </div>
 </section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+🔥 Alguien acaba de comprar hace 2 minutos
+</div>
 
 <!-- CTA FINAL -->
 <section class="hero">
   <div class="hero-content">
     <h2>🚀 Es tu momento</h2>
-    <a href="https://mpago.la/2ErKmcc" class="btn">EMPEZAR AHORA</a>
+    <a href="https://mpago.la/2ErKmcc" class="btn" onclick="fbq('track','Purchase',{value:15000,currency:'ARS'})">
+      EMPEZAR AHORA
+    </a>
   </div>
 </section>
 
@@ -251,6 +288,31 @@ body {
 
 <!-- INSTAGRAM -->
 <a href="https://instagram.com/puntodise95" class="ig-float">📲</a>
+
+<script>
+// CONTADOR
+let time = 900;
+setInterval(() => {
+  let min = Math.floor(time / 60);
+  let sec = time % 60;
+  document.getElementById("timer").innerHTML = min + ":" + (sec<10?"0":"") + sec;
+  time--;
+}, 1000);
+
+// TESTIMONIOS
+let slides = document.querySelectorAll(".testimonial-slide");
+let i = 0;
+setInterval(() => {
+  slides[i].classList.remove("active");
+  i = (i + 1) % slides.length;
+  slides[i].classList.add("active");
+}, 3000);
+
+// POPUP
+setTimeout(() => {
+  document.getElementById("popup").style.display = "block";
+}, 5000);
+</script>
 
 </body>
 </html>

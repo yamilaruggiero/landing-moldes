@@ -103,18 +103,12 @@ body {
   border-radius:15px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
   background:#fff;
-  transition:0.3s;
-}
-
-.box:hover {
-  transform:translateY(-5px);
 }
 
 /* WARNING */
 .warning {
   background:#ffe5e9;
   padding:60px 20px;
-  text-align:center;
 }
 
 /* PRECIO */
@@ -141,24 +135,41 @@ body {
   margin-top:10px;
 }
 
-/* TESTIMONIOS */
-.testimonial-carousel {
-  max-width:500px;
+/* 💬 WHATSAPP TESTIMONIOS */
+.chat-container {
+  max-width:400px;
   margin:0 auto;
+  background:#e5ddd5;
+  padding:15px;
+  border-radius:15px;
 }
 
-.testimonial-slide {
+.chat {
   display:none;
 }
 
-.testimonial-slide.active {
+.chat.active {
   display:block;
 }
 
-.testimonial-slide img {
-  width:100%;
+.bubble {
+  padding:10px 14px;
   border-radius:10px;
-  margin-bottom:10px;
+  margin:8px 0;
+  max-width:80%;
+  font-size:14px;
+  line-height:1.4;
+}
+
+.me {
+  background:#dcf8c6;
+  margin-left:auto;
+  text-align:left;
+}
+
+.other {
+  background:#fff;
+  margin-right:auto;
 }
 
 /* POPUP */
@@ -170,14 +181,7 @@ body {
   padding:15px;
   border-radius:10px;
   box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  font-size:14px;
   display:none;
-  animation:fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
 }
 
 /* FLOAT */
@@ -207,7 +211,9 @@ body {
     <h1>🎁 Empezá tu negocio de papelería hoy</h1>
     <p>Sin experiencia • 100% editable • Listo para vender 💸</p>
     <p>🔥 Más de 50 moldes listos</p>
-    <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn" onclick="fbq('track','Purchase',{value:15000,currency:'ARS'})">
+
+    <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn"
+    onclick="fbq('track','InitiateCheckout',{value:15000,currency:'ARS'})">
       QUIERO EMPEZAR
     </a>
   </div>
@@ -246,25 +252,30 @@ body {
   <p>✔ Editable en Canva</p>
   <p>✔ Listo para vender</p>
 
-  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn" onclick="fbq('track','Purchase',{value:15000,currency:'ARS'})">
+  <a href="https://mpago.la/2ErKmcc" target="_blank" class="btn"
+  onclick="fbq('track','InitiateCheckout',{value:15000,currency:'ARS'})">
     COMPRAR AHORA
   </a>
 </section>
 
-<!-- TESTIMONIOS -->
+<!-- 💬 TESTIMONIOS WHATSAPP -->
 <section class="section">
-  <h2>⭐ Resultados reales</h2>
+  <h2>💬 Lo que dicen nuestras clientas</h2>
 
-  <div class="testimonial-carousel">
-    <div class="testimonial-slide active">
-      <img src="testimonio1.jpeg">
-      <p>“No sabía diseñar y ya vendí mi primer candy 💸” – Carla</p>
+  <div class="chat-container">
+
+    <div class="chat active">
+      <div class="bubble other">Hola! esto funciona posta? 😅</div>
+      <div class="bubble me">Siii! ya hice mi primera venta 💸</div>
+      <div class="bubble me">En 2 días recuperé todo 😍</div>
     </div>
 
-    <div class="testimonial-slide">
-      <img src="testimonio2.png">
-      <p>“Hice mi primera venta en 2 días” – Sofía</p>
+    <div class="chat">
+      <div class="bubble other">No sé diseñar nada 😭</div>
+      <div class="bubble me">Yo tampoco sabía!</div>
+      <div class="bubble me">Son re fáciles los moldes 🙌</div>
     </div>
+
   </div>
 </section>
 
@@ -277,14 +288,15 @@ body {
 <section class="hero">
   <div class="hero-content">
     <h2>🚀 Es tu momento</h2>
-    <a href="https://mpago.la/2ErKmcc" class="btn" onclick="fbq('track','Purchase',{value:15000,currency:'ARS'})">
+    <a href="https://mpago.la/2ErKmcc" class="btn"
+    onclick="fbq('track','InitiateCheckout',{value:15000,currency:'ARS'})">
       EMPEZAR AHORA
     </a>
   </div>
 </section>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/5491151215052?text=Hola!%20Quiero%20empezar%20😍" class="wa-float">💬</a>
+<a href="https://wa.me/5491151215052" class="wa-float">💬</a>
 
 <!-- INSTAGRAM -->
 <a href="https://instagram.com/puntodise95" class="ig-float">📲</a>
@@ -295,18 +307,20 @@ let time = 900;
 setInterval(() => {
   let min = Math.floor(time / 60);
   let sec = time % 60;
-  document.getElementById("timer").innerHTML = min + ":" + (sec<10?"0":"") + sec;
+  document.getElementById("timer").innerHTML =
+    min + ":" + (sec<10?"0":"") + sec;
   time--;
 }, 1000);
 
-// TESTIMONIOS
-let slides = document.querySelectorAll(".testimonial-slide");
+// TESTIMONIOS CHAT
+let chats = document.querySelectorAll(".chat");
 let i = 0;
+
 setInterval(() => {
-  slides[i].classList.remove("active");
-  i = (i + 1) % slides.length;
-  slides[i].classList.add("active");
-}, 3000);
+  chats[i].classList.remove("active");
+  i = (i + 1) % chats.length;
+  chats[i].classList.add("active");
+}, 3500);
 
 // POPUP
 setTimeout(() => {

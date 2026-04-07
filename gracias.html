@@ -2,7 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Acceso a tus moldes</title>
+
+<!-- 🔒 SEGURIDAD -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://connect.facebook.net 'unsafe-inline';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
 <style>
 body {
@@ -13,90 +20,87 @@ body {
   color: #222;
 }
 
-h1 {
-  color: #ff4d6d;
-  font-size: 28px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.5;
-}
+h1 { color:#ff4d6d; font-size:28px; }
+p { font-size:18px; line-height:1.5; }
 
 .btn {
-  background: #000;
-  color: #fff;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 30px;
-  display: inline-block;
-  margin-top: 20px;
-  font-weight: bold;
-  transition: 0.3s;
+  background:#000;
+  color:#fff;
+  padding:15px 25px;
+  text-decoration:none;
+  border-radius:30px;
+  display:inline-block;
+  margin-top:20px;
+  font-weight:bold;
 }
 
-.btn:hover {
-  background: #ff4d6d;
-}
+.btn:hover { background:#ff4d6d; }
 
 .box {
-  border: 1px solid #eee;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 500px;
-  margin: 30px auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border:1px solid #eee;
+  padding:30px;
+  border-radius:15px;
+  max-width:500px;
+  margin:30px auto;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .highlight {
-  background: #fff0f3;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 15px;
-  font-weight: bold;
+  background:#fff0f3;
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+  font-weight:bold;
 }
 </style>
 </head>
 
-<body>
+<body oncontextmenu="return false">
 
 <h1>🎉 ¡Gracias por tu compra!</h1>
 
 <p>Estás a un paso de empezar tu negocio 💸✨</p>
 
 <div class="box">
- 
-<p><strong>🎁 BONUS EXCLUSIVO</strong></p>
 
-<p>Completá este paso 👇 y además de tus moldes, te llevás GRATIS:</p>
+<!-- 🔥 BONUS PROTAGONISTA -->
+<p><strong>🎁 REGALO ESPECIAL POR TU COMPRA</strong></p>
 
 <p>
-✨ 📚 Kit editable Escolar 📒📓 <br>
+Además de tu kit de moldes, te llevás GRATIS:<br><br>
+✨ <strong>Kit de Etiquetas Escolares Editable</strong> 📚📓
 </p>
 
-<a href="https://forms.gle/xSkKcSwdrQMfhJbq5M" target="_blank" class="btn">
-👉 QUIERO MIS MOLDES + BONUS
+<p>Para recibir TODO el contenido, completá este paso 👇</p>
+
+<a href="https://forms.gle/xSkKcSwdrQMfhJbq5M"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+👉 COMPLETAR Y RECIBIR ACCESO
 </a>
 
 <div class="highlight">
-⚡ Te envío el acceso en breve a tu email
+⚡ Importante: El acceso a tus moldes + bonus se envía automáticamente a tu email una vez completado el formulario
 </div>
 
 <hr style="margin:30px 0;">
 
-<p><strong>¿Ya completaste el formulario?</strong></p>
-
-<p>Podés acceder directamente a tus moldes acá 👇</p>
-
-<a href="https://drive.google.com/drive/folders/1kLO96gLEQIRmVhOizt0FxbCh8dRRjnuj?usp=sharing" target="_blank" class="btn">
-👉 ACCEDER A LOS MOLDES
-</a>
-
-<p style="margin-top:20px; font-size:14px; color:#777;">
-💡 Guardá este link para usarlo cuando quieras
+<!-- 🔒 MENSAJE DE SEGURIDAD -->
+<p style="font-size:14px; color:#777;">
+🔒 Este acceso es personal. Por seguridad, el contenido se envía únicamente al email registrado.
 </p>
 
 </div>
+
+<!-- 🔒 ANTI COPIA -->
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 'c' || e.key === 's')) {
+    e.preventDefault();
+  }
+});
+</script>
 
 </body>
 </html>

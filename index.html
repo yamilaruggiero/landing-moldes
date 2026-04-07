@@ -50,14 +50,6 @@ body {
   max-width:700px;
 }
 
-.hero h1 {
-  font-size:42px;
-}
-
-.hero p {
-  font-size:20px;
-}
-
 /* BOTON */
 .btn {
   background:#ff4d6d;
@@ -107,12 +99,13 @@ body {
   padding:20px;
   border-radius:15px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-  .center-box {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-
+/* CONTENEDOR CENTRADO */
+.center-box {
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
 }
 
 /* PRICE */
@@ -132,21 +125,30 @@ body {
   color:#fff;
   padding:15px;
   font-weight:bold;
+  text-align:center;
 }
 
 /* TESTIMONIOS */
 .testimonial {
   background:#fff0f3;
-  margin:10px auto;
+  margin:20px auto;
   max-width:500px;
   padding:20px;
   border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* WARNING SECTION */
+.testimonial img {
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+/* WARNING */
 .warning {
   background:#ffe5e9;
   padding:60px 20px;
+  text-align:center;
 }
 
 /* FLOAT BUTTONS */
@@ -175,29 +177,8 @@ body {
   <div class="hero-content">
     <h1>🎁 Empezá tu negocio de papelería hoy</h1>
     <p>Sin experiencia • 100% editable • Listo para vender 💸</p>
-
     <p>🔥 Más de 50 moldes listos para usar</p>
-
     <a href="#comprar" class="btn">QUIERO EMPEZAR A VENDER</a>
-  </div>
-</section>
-
-<!-- PRUEBA SOCIAL -->
-<section class="section">
-  <h2>🔥 Más de 100 emprendedoras ya empezaron</h2>
-</section>
-
-<!-- CAROUSEL -->
-<section class="section">
-  <h2>🎨 Mira lo que puedes crear</h2>
-
-  <div class="carousel">
-    <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg">
-    <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg">
-    <img src="ppp.jpg">
-    <img src="svdsvdvd.jpg">
-    <img src="6cd32f8d-e90e-45a9-8be8-f242cf29a0d4.jpg">
-    <img src="c62dc4c3-1c7f-4815-86c8-f08c8005bb86.jpg">
   </div>
 </section>
 
@@ -221,13 +202,12 @@ body {
   </div>
 </section>
 
+<!-- URGENCIA -->
 <div class="urgency">
-  <div class="center-box">
-    🔥 DESCUENTO SOLO POR HOY 🔥
-  </div>
+🔥 DESCUENTO SOLO POR HOY 🔥
 </div>
 
-
+<!-- PRECIO -->
 <section class="section" id="comprar">
   <h2>💰 Empezá hoy mismo</h2>
 
@@ -247,14 +227,14 @@ body {
 <section class="section">
   <h2>⭐ Resultados reales</h2>
 
-  <div class="testimonio">
-    <img src="testimonio1.jpg" style="width:100%;border-radius:10px;">
-    <p>“No sabia diseñar, y con tus moldes lo logre, gracias! Caiste del cielo ” – Carla</p>
+  <div class="testimonial">
+    <img src="testimonio 1.jpg">
+    <p>“No sabía diseñar y ya vendí 💸” – Carla</p>
   </div>
 
-  <div class="testimonio">
-    <img src="testimonio2.png" style="width:100%;border-radius:10px;">
-    <p>“Hice mi primera, venta! ” – Carla</p>
+  <div class="testimonial">
+    <img src="testimonio 2.jpg">
+    <p>“Hice mi primera venta en días” – Sofía</p>
   </div>
 </section>
 

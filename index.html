@@ -3,40 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moldes de Papelería Creativa</title>
+
+<title>Empezá tu negocio de papelería creativa hoy</title>
+
+<meta name="description" content="Creá y vendé productos de papelería creativa sin experiencia. Más de 50 moldes listos. Acceso inmediato.">
+
+<!-- META ADS -->
+<meta property="og:title" content="Negocio de papelería creativa desde casa">
+<meta property="og:description" content="Más de 50 moldes listos para vender. Empezá hoy.">
+<meta property="og:image" content="portada.jpg">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<meta name="description" content="Empezá tu negocio de papelería creativa con más de 50 moldes listos para vender. Editable en Canva. Acceso inmediato.">
-<link rel="icon" href="favicon.png" sizes="32x32">
-<link rel="icon" href="favicon.png" sizes="192x192">
-<link rel="apple-touch-icon" href="favicon.png">
-  
 <style>
 body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
-.topbar {background:#000;color:#fff;text-align:center;padding:10px;font-size:14px;}
-.hero {position:relative;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
-.hero::before {content:"";position:absolute;width:100%;height:100%;background:url("portada.jpg") center/cover no-repeat;filter:brightness(0.5);}
+
+.topbar {background:#000;color:#fff;text-align:center;padding:10px;}
+
+.hero {
+  position:relative;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.hero::before {
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:url("portada.jpg") center/cover no-repeat;
+  filter:brightness(0.5);
+}
 .hero-content {position:relative;z-index:2;max-width:700px;}
-.btn {background:#ff4d6d;color:#fff;padding:18px 30px;border-radius:50px;text-decoration:none;display:inline-block;margin-top:20px;font-weight:bold;transition:0.3s;}
-.btn:hover {background:#ff2e55;transform:scale(1.05);}
-.section {padding:80px 20px;text-align:center;}
-.flex {display:flex;flex-wrap:wrap;justify-content:center;}
-.box {width:250px;margin:10px;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
-.warning {background:#ffe5e9;padding:60px 20px;}
+
+.btn {
+  background:#ff4d6d;
+  color:#fff;
+  padding:16px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:20px;
+  font-weight:bold;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:10px;
+  max-width:900px;
+  margin:auto;
+}
+
+.grid img {
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.section {padding:60px 20px;text-align:center;}
+
 .price {font-size:42px;color:#ff4d6d;}
 .old {text-decoration:line-through;color:#999;}
-.urgency {background:#000;color:#fff;padding:15px;text-align:center;}
-.countdown {font-size:22px;margin-top:10px;}
-img.mock {width:90%;max-width:400px;border-radius:15px;margin:10px;}
 
-/* 🔥 CARRUSEL */
-.carousel {max-width:350px;margin:20px auto;}
-.slide {width:100%;border-radius:15px;display:none;}
+.urgency {background:#000;color:#fff;padding:15px;text-align:center;}
+
+.carousel {max-width:300px;margin:20px auto;}
+.slide {
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  display:none;
+}
 .slide.active {display:block;}
-.dots {text-align:center;margin-top:10px;}
-.dots span {height:10px;width:10px;margin:5px;background:#ccc;display:inline-block;border-radius:50%;cursor:pointer;}
-.dots span:hover {background:#ff4d6d;}
 </style>
 </head>
 
@@ -46,89 +92,105 @@ img.mock {width:90%;max-width:400px;border-radius:15px;margin:10px;}
 🚀 Empezá hoy y recuperá tu inversión en tu primera venta
 </div>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>🎁 Creá tu negocio de papelería desde casa</h1>
-    <p>Sin experiencia • 100% editable • Listo para vender 💸</p>
-    <a href="https://mpago.la/2ErKmcc" class="btn">QUIERO GANAR DINERO HOY</a>
+    <h1>💸 Convertí tu creatividad en ingresos desde casa</h1>
+    <p>Sin experiencia • Sin invertir de más • Empezá hoy mismo</p>
+
+    <a href="https://mpago.la/2ErKmcc" class="btn">
+      QUIERO EMPEZAR MI NEGOCIO
+    </a>
   </div>
 </section>
 
 <!-- PRODUCTOS -->
 <section class="section">
   <h2>😍 Mirá lo que podés vender</h2>
-  <p>Productos reales hechos con los moldes 💸</p>
 
-  <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg" class="mock">
-  <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg" class="mock">
-  <img src="ppp.jpg" class="mock">
-  <img src="svdsvdvd.jpg" class="mock">
+  <div class="grid">
+    <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg">
+    <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg">
+    <img src="ppp.jpg">
+    <img src="6cd32f8d-e90e-45a9-8be8-f242cf29a0d4.jpg">
+  </div>
 </section>
 
-<!-- INCLUYE -->
+<!-- RESULTADO -->
 <section class="section">
-  <h2>📦 Qué incluye</h2>
-  <p>✔ Más de 50 moldes editables</p>
-  <p>✔ Cajas personalizadas</p>
-  <p>✔ Bolsitas y etiquetas</p>
-  <p>✔ Stickers</p>
-  <p>✔ Diseños para fechas especiales</p>
+  <h2>✨ Esto no es solo papelería...</h2>
+  <p>Es la posibilidad de generar ingresos desde casa 💖</p>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="section">
+  <h2>💡 Por qué esto funciona</h2>
+  <p>✔ Productos que siempre se venden</p>
+  <p>✔ No necesitás experiencia</p>
+  <p>✔ Podés empezar hoy</p>
+  <p>✔ Recuperás la inversión rápido</p>
 </section>
 
 <!-- OBJECIONES -->
 <section class="section">
-  <h2>🙌 No necesitás experiencia</h2>
-  <p>✔ Editable en Canva súper fácil</p>
-  <p>✔ Podés imprimir en cualquier gráfica</p>
-  <p>✔ Paso a paso incluido</p>
+  <h2>🙋‍♀️ Si pensás “no sé si es para mí...”</h2>
+  <p>No necesitás saber diseñar.</p>
+  <p>Solo editás, imprimís y vendés 💸</p>
+</section>
+
+<!-- PRUEBA SOCIAL -->
+<section class="section">
+  <h2>💬 Resultados reales</h2>
+  <p>“Hice mi primera venta en pocos días 😍”</p>
+  <p>“No sabía nada y pude empezar 🙌”</p>
 </section>
 
 <!-- URGENCIA -->
 <div class="urgency">
-🔥 OFERTA POR LANZAMIENTO
-<div class="countdown" id="timer"></div>
+🔥 PRECIO PROMO POR LANZAMIENTO
+<div id="timer"></div>
 </div>
 
 <!-- PRECIO -->
 <section class="section">
-  <h2>💰 Empezá hoy</h2>
+  <h2>💰 Empezá hoy mismo</h2>
+
   <p class="old">$30.000</p>
   <p class="price">$15.000</p>
 
   <p>✔ Acceso inmediato</p>
+  <p>✔ Más de 50 moldes</p>
   <p>✔ Listo para vender</p>
-  <p>✔ Editable fácil</p>
 
-  <!-- 🔥 CARRUSEL -->
-  <h3>✨ Algunos moldes incluidos en el kit</h3>
+  <h3>✨ Algunos moldes incluidos</h3>
 
   <div class="carousel">
-    <img src="MOLDE1.jpg" class="slide active">
-    <img src="MOLDE2.jpg" class="slide">
-    <img src="MOLDE3.jpg" class="slide">
-
-    <div class="dots">
-      <span onclick="goToSlide(0)"></span>
-      <span onclick="goToSlide(1)"></span>
-      <span onclick="goToSlide(2)"></span>
-    </div>
+    <img src="MOLDE1.png" class="slide active" onerror="this.style.display='none'">
+    <img src="MOLDE2.png" class="slide" onerror="this.style.display='none'">
+    <img src="MOLDE3.png" class="slide" onerror="this.style.display='none'">
   </div>
 
-  <a href="https://mpago.la/2ErKmcc" class="btn">COMPRAR AHORA</a>
+  <a href="https://mpago.la/2ErKmcc" class="btn">
+    QUIERO EMPEZAR AHORA
+  </a>
+
+  <p style="margin-top:10px;font-size:14px;">
+    🔒 Pago seguro • Acceso inmediato
+  </p>
 </section>
 
-<!-- FINAL -->
+<!-- CIERRE -->
 <section class="section">
-  <h2>🚀 Es tu momento</h2>
-  <p>✔ Más de 50 moldes</p>
-  <p>✔ Negocio desde casa</p>
-  <p>✔ Recuperás rápido la inversión</p>
+  <h2>🚀 Tu negocio puede empezar hoy</h2>
+  <p>No es falta de tiempo… es falta de empezar.</p>
 
-  <a href="https://mpago.la/2ErKmcc" class="btn">EMPEZAR AHORA</a>
+  <a href="https://mpago.la/2ErKmcc" class="btn">
+    EMPEZAR AHORA
+  </a>
 </section>
 
 <script>
-// CONTADOR
+// contador
 let time = 900;
 setInterval(() => {
   let min = Math.floor(time / 60);
@@ -138,23 +200,14 @@ setInterval(() => {
   time--;
 }, 1000);
 
-// CARRUSEL
+// carrusel
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
-function showSlide(index) {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
-}
-
-function goToSlide(index) {
-  currentSlide = index;
-  showSlide(currentSlide);
-}
-
 setInterval(() => {
+  slides.forEach(s => s.classList.remove("active"));
   currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+  slides[currentSlide].classList.add("active");
 }, 3000);
 </script>
 

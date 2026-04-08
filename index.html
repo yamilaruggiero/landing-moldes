@@ -258,30 +258,19 @@ document.addEventListener('keydown', function(e) {
 <script>
 async function comprar() {
   try {
-
     fbq('track', 'InitiateCheckout');
 
     const res = await fetch("https://v0-backend-moldes.vercel.app/api/create-preference", {
-      method: "GET"
+      method: "POST" // 👈 ESTO ES CLAVE
     });
-
-    if (!res.ok) {
-      throw new Error("Error en backend");
-    }
 
     const data = await res.json();
 
-    if (data.init_point) {
-      window.location.href = data.init_point;
-    } else {
-      alert("No se pudo generar el pago");
-    }
+    window.location.href = data.init_point;
 
   } catch (error) {
-    console.error(error);
     alert("Error de conexión con el servidor");
   }
 }
-</script>
 </body>
 </html>

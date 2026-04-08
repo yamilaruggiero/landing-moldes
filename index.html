@@ -8,13 +8,11 @@
 
 <meta name="description" content="Creá y vendé productos de papelería creativa sin experiencia. Más de 50 moldes listos. Acceso inmediato.">
 
-<!-- SEO -->
 <meta property="og:title" content="Negocio de papelería creativa desde casa">
 <meta property="og:description" content="Más de 50 moldes listos para vender. Empezá hoy.">
 <meta property="og:image" content="portada.jpg">
 <meta property="og:type" content="website">
 
-<!-- SEGURIDAD -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; script-src 'self' https://connect.facebook.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com;">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -26,7 +24,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -116,7 +113,6 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
 🚀 Empezá hoy y recuperá tu inversión en tu primera venta
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>💸 Convertí tu creatividad en ingresos desde casa</h1>
@@ -128,7 +124,6 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
   </div>
 </section>
 
-<!-- PRODUCTOS -->
 <section class="section">
   <h2>😍 Mirá lo que podés vender</h2>
 
@@ -140,7 +135,6 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
   </div>
 </section>
 
-<!-- TESTIMONIOS -->
 <section class="section">
   <h2>💬 Resultados reales</h2>
   <p>“Hice mi primera venta en pocos días 😍”</p>
@@ -148,13 +142,21 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
   <p>“Recuperé la inversión súper rápido 💸”</p>
 </section>
 
-<!-- URGENCIA -->
+<section class="section">
+  <h2>🔥 Ya hay personas generando ingresos con esto</h2>
+
+  <p style="font-size:32px; font-weight:bold; color:#ff4d6d;">
+    + <span id="ventas">347</span> ventas realizadas
+  </p>
+
+  <p>Sumate vos también y empezá hoy 💸</p>
+</section>
+
 <div class="urgency">
 🔥 OFERTA POR LANZAMIENTO
 <div id="timer"></div>
 </div>
 
-<!-- PRECIO -->
 <section class="section">
   <h2>💰 Empezá hoy mismo</h2>
 
@@ -173,6 +175,22 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
     QUIERO EMPEZAR AHORA
   </a>
 </section>
+
+<!-- 🔥 NOTIFICACIONES -->
+<div id="notificacion" style="
+position:fixed;
+bottom:20px;
+left:20px;
+background:#fff;
+padding:12px 16px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+font-size:14px;
+display:none;
+z-index:999;
+max-width:250px;">
+<span id="textoNoti"></span>
+</div>
 
 <script>
 // contador
@@ -194,6 +212,35 @@ setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].classList.add("active");
 }, 3000);
+
+// ventas
+let ventas = 347;
+setInterval(() => {
+  ventas += Math.floor(Math.random() * 2);
+  document.getElementById("ventas").innerText = ventas;
+}, 5000);
+
+// 🔥 NOTIFICACIONES
+const nombres = ["María","Sofía","Lucía","Camila","Valentina","Florencia","Carla","Julieta"];
+const lugares = ["Buenos Aires","Córdoba","Rosario","Mendoza","La Plata","Salta"];
+
+function mostrarNotificacion(){
+  const nombre = nombres[Math.floor(Math.random()*nombres.length)];
+  const lugar = lugares[Math.floor(Math.random()*lugares.length)];
+  const minutos = Math.floor(Math.random()*10)+1;
+
+  const texto = `${nombre} de ${lugar} compró hace ${minutos} min`;
+
+  const noti = document.getElementById("notificacion");
+  const textoNoti = document.getElementById("textoNoti");
+
+  textoNoti.innerText = texto;
+  noti.style.display = "block";
+
+  setTimeout(()=>{noti.style.display="none";},4000);
+}
+
+setInterval(mostrarNotificacion,8000);
 
 // anti copia
 document.addEventListener('keydown', function(e) {

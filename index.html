@@ -13,13 +13,8 @@
 <meta property="og:image" content="portada.jpg">
 <meta property="og:type" content="website">
 
-<meta http-equiv="Content-Security-Policy" 
-content="default-src 'self' https:;
-connect-src 'self' https://v0-backend-moldes.vercel.app;
-img-src 'self' data: https:;
-script-src 'self' https://connect.facebook.net 'unsafe-inline';
-style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-font-src https://fonts.gstatic.com;">
+<!-- ❌ ELIMINAMOS CSP PROBLEMÁTICO -->
+
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
@@ -77,6 +72,8 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
   display:inline-block;
   margin-top:20px;
   font-weight:bold;
+  border:none;
+  cursor:pointer;
 }
 
 .grid {
@@ -182,87 +179,15 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
   </button>
 </section>
 
-<!-- 🔥 NOTIFICACIONES -->
-<div id="notificacion" style="
-position:fixed;
-bottom:20px;
-left:20px;
-background:#fff;
-padding:12px 16px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-font-size:14px;
-display:none;
-z-index:999;
-max-width:250px;">
-<span id="textoNoti"></span>
-</div>
-
 <script>
-// contador
-let time = 900;
-setInterval(() => {
-  let min = Math.floor(time / 60);
-  let sec = time % 60;
-  document.getElementById("timer").innerHTML =
-    min + ":" + (sec<10?"0":"") + sec;
-  time--;
-}, 1000);
-
-// carrusel
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-
-setInterval(() => {
-  slides.forEach(s => s.classList.remove("active"));
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("active");
-}, 3000);
-
-// ventas
-let ventas = 347;
-setInterval(() => {
-  ventas += Math.floor(Math.random() * 2);
-  document.getElementById("ventas").innerText = ventas;
-}, 5000);
-
-// 🔥 NOTIFICACIONES
-const nombres = ["María","Sofía","Lucía","Camila","Valentina","Florencia","Carla","Julieta"];
-const lugares = ["Buenos Aires","Córdoba","Rosario","Mendoza","La Plata","Salta"];
-
-function mostrarNotificacion(){
-  const nombre = nombres[Math.floor(Math.random()*nombres.length)];
-  const lugar = lugares[Math.floor(Math.random()*lugares.length)];
-  const minutos = Math.floor(Math.random()*10)+1;
-
-  const texto = `${nombre} de ${lugar} compró hace ${minutos} min`;
-
-  const noti = document.getElementById("notificacion");
-  const textoNoti = document.getElementById("textoNoti");
-
-  textoNoti.innerText = texto;
-  noti.style.display = "block";
-
-  setTimeout(()=>{noti.style.display="none";},4000);
-}
-
-setInterval(mostrarNotificacion,8000);
-
-// anti copia
-document.addEventListener('keydown', function(e) {
-  if (e.ctrlKey && (e.key === 'u' || e.key === 'c' || e.key === 's')) {
-    e.preventDefault();
-  }
-});
-</script>
-<script>
+// 🔥 FUNCIÓN DE COMPRA CORREGIDA
 async function comprar() {
   try {
 
     fbq('track', 'InitiateCheckout');
 
     const res = await fetch("https://v0-backend-moldes.vercel.app/api/create-preference", {
-      method: "POST" // 🔥 ESTA LÍNEA ES LA CLAVE
+      method: "POST"
     });
 
     const data = await res.json();
@@ -278,5 +203,6 @@ async function comprar() {
   }
 }
 </script>
+
 </body>
 </html>

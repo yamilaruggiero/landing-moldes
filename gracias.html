@@ -14,6 +14,22 @@ font-src https://fonts.gstatic.com;">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+<!-- 🔥 META PIXEL (AGREGADO) -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '938325122261348');
+fbq('track', 'PageView');
+</script>
+
 <style>
 body {
   font-family: 'Poppins', sans-serif;
@@ -46,6 +62,139 @@ body {
   animation: pop 0.5s ease;
 }
 
+.check::after {
+  content:"✔";
+  color:#fff;
+  font-size:35px;
+}
+
+@keyframes pop {
+  0% {transform:scale(0);}
+  100% {transform:scale(1);}
+}
+
+.check-text {
+  margin-top:10px;
+  font-weight:bold;
+  color:#4CAF50;
+}
+
+h1 {
+  color:#ff4d6d;
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+p {
+  font-size:17px;
+  line-height:1.6;
+}
+
+.btn {
+  background:#ff4d6d;
+  color:#fff;
+  padding:16px 28px;
+  text-decoration:none;
+  border-radius:50px;
+  display:inline-block;
+  margin-top:20px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#ff2e55;
+  transform:scale(1.05);
+}
+
+.box {
+  border:1px solid #eee;
+  padding:35px;
+  border-radius:15px;
+  margin-top:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.highlight {
+  background:#fff0f3;
+  padding:15px;
+  border-radius:10px;
+  margin-top:20px;
+  font-weight:bold;
+}
+
+hr {
+  margin:30px 0;
+  border:none;
+  border-top:1px solid #eee;
+}
+</style>
+</head>
+
+<body oncontextmenu="return false">
+
+<div class="container">
+
+<!-- 🔥 CHECK DE PAGO -->
+<div class="check-container">
+  <div class="check"></div>
+  <div class="check-text">Pago confirmado</div>
+</div>
+
+<h1>🎉 ¡Gracias por tu compra!</h1>
+
+<p>Estás a un paso de empezar tu negocio 💸✨</p>
+
+<div class="box">
+
+<h2>🎁 REGALO ESPECIAL POR TU COMPRA</h2>
+
+<p>Además de tu kit de moldes, te llevás GRATIS:</p>
+
+<p style="font-weight:bold; font-size:18px;">
+✨ Kit de Etiquetas Escolares Editable 📚📓
+</p>
+
+<p>Para recibir TODO el contenido, completá este paso 👇</p>
+
+<a href="https://forms.gle/KcAz1sQ3evFWuztG7"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+👉 COMPLETAR Y RECIBIR ACCESO
+</a>
+
+<div class="highlight">
+⚡ El acceso a tus moldes + bonus se envía automáticamente a tu email una vez completado el formulario
+</div>
+
+<hr>
+
+<p style="font-size:14px; color:#777;">
+🔒 Este acceso es personal. Por seguridad, el contenido se envía únicamente al email registrado.
+</p>
+
+</div>
+
+</div>
+
+<script>
+// 🔥 EVENTO DE COMPRA (AGREGADO)
+fbq('track', 'Purchase', {
+  value: 15000,
+  currency: 'ARS'
+});
+
+// anti copia (original intacto)
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 'c' || e.key === 's')) {
+    e.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
 .check::after {
   content:"✔";
   color:#fff;

@@ -124,9 +124,9 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
     <h1>💸 Convertí tu creatividad en ingresos desde casa</h1>
     <p>Sin experiencia • Sin invertir de más • Empezá hoy mismo</p>
 
-    <a href="https://v0-backend-moldes.vercel.app/api/create-preference" class="btn">
+    <button onclick="comprar()" class="btn">
       QUIERO EMPEZAR MI NEGOCIO
-    </a>
+    </button>
   </div>
 </section>
 
@@ -177,9 +177,9 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
     <img src="MOLDE3.png" class="slide">
   </div>
 
-  <a href="https://v0-backend-moldes.vercel.app/api/create-preference" class="btn">
+  <button onclick="comprar()" class="btn">
     QUIERO EMPEZAR AHORA
-  </a>
+  </button>
 </section>
 
 <!-- 🔥 NOTIFICACIONES -->
@@ -258,19 +258,25 @@ document.addEventListener('keydown', function(e) {
 <script>
 async function comprar() {
   try {
+
     fbq('track', 'InitiateCheckout');
 
     const res = await fetch("https://v0-backend-moldes.vercel.app/api/create-preference", {
-      method: "POST" // 👈 ESTO ES CLAVE
+      method: "POST" // 🔥 ESTA LÍNEA ES LA CLAVE
     });
 
     const data = await res.json();
 
-    window.location.href = data.init_point;
+    if (data.init_point) {
+      window.location.href = data.init_point;
+    } else {
+      alert("Error al generar el pago");
+    }
 
   } catch (error) {
     alert("Error de conexión con el servidor");
   }
 }
+</script>
 </body>
 </html>

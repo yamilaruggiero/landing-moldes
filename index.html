@@ -259,20 +259,27 @@ document.addEventListener('keydown', function(e) {
 async function comprar() {
   try {
 
-    // 🔥 TRACKING META (muy importante)
     fbq('track', 'InitiateCheckout');
 
-    const res = await fetch("https://v0-backend-moldes.vercel.app/api/create-preference");
+    const res = await fetch("https://v0-backend-moldes.vercel.app/api/create-preference", {
+      method: "GET"
+    });
+
+    if (!res.ok) {
+      throw new Error("Error en backend");
+    }
+
     const data = await res.json();
 
     if (data.init_point) {
       window.location.href = data.init_point;
     } else {
-      alert("Error al generar el pago");
+      alert("No se pudo generar el pago");
     }
 
   } catch (error) {
-    alert("Error de conexión");
+    console.error(error);
+    alert("Error de conexión con el servidor");
   }
 }
 </script>

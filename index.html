@@ -13,8 +13,6 @@
 <meta property="og:image" content="portada.jpg">
 <meta property="og:type" content="website">
 
-<!-- ❌ ELIMINAMOS CSP PROBLEMÁTICO -->
-
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
@@ -41,83 +39,131 @@ fbq('track', 'PageView');
 </script>
 
 <style>
-body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
-.topbar {background:#000;color:#fff;text-align:center;padding:10px;}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.topbar {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
 
 .hero {
-  position:relative;
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
+
 .hero::before {
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:url("portada.jpg") center/cover no-repeat;
-  filter:brightness(0.5);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("portada.jpg") center/cover no-repeat;
+  filter: brightness(0.5);
 }
-.hero-content {position:relative;z-index:2;max-width:700px;}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
 
 .btn {
-  background:#ff4d6d;
-  color:#fff;
-  padding:16px 28px;
-  border-radius:50px;
-  text-decoration:none;
-  display:inline-block;
-  margin-top:20px;
-  font-weight:bold;
-  border:none;
-  cursor:pointer;
+  background: #ff4d6d;
+  color: #fff;
+  padding: 16px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:10px;
-  max-width:900px;
-  margin:auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .grid img {
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.section {padding:60px 20px;text-align:center;}
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-.price {font-size:42px;color:#ff4d6d;}
-.old {text-decoration:line-through;color:#999;}
+.price {
+  font-size: 42px;
+  color: #ff4d6d;
+}
 
-.urgency {background:#000;color:#fff;padding:15px;text-align:center;font-size:18px;}
-#timer {margin-top:10px;font-size:22px;font-weight:bold;}
+.old {
+  text-decoration: line-through;
+  color: #999;
+}
 
-.carousel {max-width:300px;margin:20px auto;}
+.urgency {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#timer {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.carousel {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
 .slide {
-  width:100%;
-  height:220px;
-  object-fit:contain;
-  display:none
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display: none;
   transition: opacity 0.5s ease;
 }
-.slide.active {display:block;}
+
+.slide.active {
+  display: block;
+}
+
 </style>
 </head>
 
 <body oncontextmenu="return false">
 
 <div class="topbar">
-🚀 Empezá hoy y recuperá tu inversión en tu primera venta
+  🚀 Empezá hoy y recuperá tu inversión en tu primera venta
 </div>
 
 <section class="hero">
+
   <div class="hero-content">
 
     <p style="font-weight:600; font-size:14px; margin-bottom:10px;">
@@ -134,6 +180,7 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
       ✔ Recuperá tu inversión rápido  
       ✔ Acceso inmediato
     </p>
+
     <p style="margin-top:15px; font-weight:bold; color:#ff4d6d;">
       ⏳ Oferta activa por tiempo limitado
     </p>
@@ -141,141 +188,188 @@ body {margin:0;font-family:'Poppins',sans-serif;background:#fff;color:#222;}
     <button onclick="comprar()" class="btn">
       QUIERO EMPEZAR Y VENDER HOY
     </button>
-    <div style="margin-top:20px; text-align:center; font-family: 'Poppins', sans-serif;">
 
-    <div style="margin-top:15px;">
-      <p style="font-size:13px; color::#fff;">
-        🔒 Pago seguro con Mercado Pago
+    <div style="margin-top:20px; text-align:center; font-family:'Poppins', sans-serif;">
+
+      <div style="margin-top:15px;">
+        <p style="font-size:13px; color:#fff;">
+          🔒 Pago seguro con Mercado Pago
+        </p>
+      </div>
+
+      <div style="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
+        <img src="https://img.icons8.com/color/48/visa.png" width="40" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" width="40" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" width="40" alt="American Express">
+        <img src="https://img.icons8.com/color/48/mercado-pago.png" width="40" alt="Mercado Pago">
+      </div>
+
+      <p style="font-size:13px; color:#777;">
+        ⚡ Acceso inmediato luego del pago
       </p>
+
     </div>
 
-  <div style="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
-    <img src="https://img.icons8.com/color/48/visa.png" width="40"/>
-    <img src="https://img.icons8.com/color/48/mastercard.png" width="40"/>
-    <img src="https://img.icons8.com/color/48/amex.png" width="40"/>
-    <img src="https://img.icons8.com/color/48/mercado-pago.png" width="40"/>
   </div>
 
-  <p style="font-size:13px; color:#777;">
-    ⚡ Acceso inmediato luego del pago
-  </p>
-
-</div>
-  </div>
 </section>
 
 <section class="section">
+
   <h2>😍 Mirá lo que podés vender</h2>
 
   <div class="grid">
-    <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg">
-    <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg">
-    <img src="ppp.jpg">
-    <img src="6cd32f8d-e90e-45a9-8be8-f242cf29a0d4.jpg">
+
+    <img src="1d7f0c5d-c065-41f0-aaa4-ada67570cb0d.jpg" alt="Producto de papelería">
+    <img src="2e44b4c9-dba0-47f5-a93f-b05fccd21474.jpg" alt="Producto de papelería">
+    <img src="ppp.jpg" alt="Producto de papelería">
+    <img src="6cd32f8d-e90e-45a9-8be8-f242cf29a0d4.jpg" alt="Producto de papelería">
+
   </div>
+
 </section>
 
 <section class="section">
+
   <h2>💬 Lo que dicen quienes ya empezaron</h2>
 
   <p>⭐⭐⭐⭐⭐ “En una semana ya había vendido mis primeros pedidos”</p>
   <p>⭐⭐⭐⭐⭐ “No sabía nada y hoy ya tengo clientes”</p>
   <p>⭐⭐⭐⭐⭐ “Es súper fácil de usar y recuperar la inversión”</p>
+
 </section>
 
 <section class="section">
+
   <h2>🔥 Ya hay personas generando ingresos con esto</h2>
 
   <p style="font-size:32px; font-weight:bold; color:#ff4d6d;">
     + <span id="ventas">347</span> ventas realizadas
   </p>
 
-  <p>Sumate vos también y empezá hoy 💸</p>
+  <p>
+    Sumate vos también y empezá hoy 💸
+  </p>
+
 </section>
 
 <div class="urgency">
-🔥 🔥 OFERTA POR LANZAMIENTO (HOY ÚLTIMO DÍA)
-<div id="timer"></div>
+
+  🔥 🔥 OFERTA POR LANZAMIENTO (HOY ÚLTIMO DÍA)
+
+  <div id="timer"></div>
+
 </div>
 
 <section class="section">
+
   <h2>💰 Empezá hoy mismo</h2>
 
-  <p class="old">$30.000</p>
-  <p class="price">$15.000</p>
+  <p class="old">$35.000</p>
+
+  <p class="price">$20.000</p>
+
   <p style="color:#555; font-size:14px;">
-  💡 Con solo 2 ventas recuperás la inversión
+    💡 Con solo 2 ventas recuperás la inversión
   </p>
   
   <h3>✨ Algunos moldes incluidos</h3>
 
   <div class="carousel">
-    <img src="MOLDE1.png" class="slide active">
-    <img src="MOLDE2.png" class="slide">
-    <img src="MOLDE3.png" class="slide">
+
+    <img src="MOLDE1.png" class="slide active" alt="Molde 1">
+    <img src="MOLDE2.png" class="slide" alt="Molde 2">
+    <img src="MOLDE3.png" class="slide" alt="Molde 3">
+
   </div>
 
   <button onclick="comprar()" class="btn">
-    Accede a los moldes
+    Accedé a los moldes
   </button>
-   <div style="margin-top:20px; text-align:center; font-family: 'Poppins', sans-serif;">
 
-  <p style="font-size:14px; color:#555; margin-bottom:10px;">
-    🔒 Pago 100% seguro con Mercado Pago
-  </p>
+  <div style="margin-top:20px; text-align:center; font-family:'Poppins', sans-serif;">
 
-  <div style="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
-    <img src="https://img.icons8.com/color/48/visa.png" width="40"/>
-    <img src="https://img.icons8.com/color/48/mastercard.png" width="40"/>
-    <img src="https://img.icons8.com/color/48/amex.png" width="40"/>
-    <img src="https://img.icons8.com/color/48/mercado-pago.png" width="40"/>
+    <p style="font-size:14px; color:#555; margin-bottom:10px;">
+      🔒 Pago 100% seguro con Mercado Pago
+    </p>
+
+    <div style="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
+
+      <img src="https://img.icons8.com/color/48/visa.png" width="40" alt="Visa">
+      <img src="https://img.icons8.com/color/48/mastercard.png" width="40" alt="Mastercard">
+      <img src="https://img.icons8.com/color/48/amex.png" width="40" alt="American Express">
+      <img src="https://img.icons8.com/color/48/mercado-pago.png" width="40" alt="Mercado Pago">
+
+    </div>
+
+    <p style="font-size:13px; color:#777;">
+      ⚡ Acceso inmediato luego del pago
+    </p>
+
   </div>
 
-  <p style="font-size:13px; color:#777;">
-    ⚡ Acceso inmediato luego del pago
-  </p>
-
-</div>
 </section>
 
 <script>
-// 🔥 FUNCIÓN DE COMPRA CORREGIDA
+
+// 💳 FUNCIÓN DE COMPRA
 async function comprar() {
+
   try {
 
     fbq('track', 'InitiateCheckout');
 
-    const res = await fetch("https://v0-backend-moldes.vercel.app/api/create-preference", {
-      method: "POST"
-    });
+    const res = await fetch(
+      "https://v0-backend-moldes.vercel.app/api/create-preference",
+      {
+        method: "POST"
+      }
+    );
 
     const data = await res.json();
 
     if (data.init_point) {
+
       window.location.href = data.init_point;
+
     } else {
+
       alert("Error al generar el pago");
+
     }
 
   } catch (error) {
+
     alert("Error de conexión con el servidor");
+
   }
+
 }
-</script>
-<script>
+
 
 // 🔢 CONTADOR DE VENTAS DINÁMICO
+
 let ventas = 347;
+
 setInterval(() => {
-  ventas += Math.floor(Math.random() * 2); // suma 0 o 1
+
+  ventas += Math.floor(Math.random() * 2);
+
   document.getElementById("ventas").innerText = ventas;
+
 }, 5000);
 
 
-// ⏳ TIMER DE URGENCIA (15 minutos reiniciables)
+// ⏳ TIMER DE URGENCIA
+
 function startTimer(duration) {
-  let timer = duration, minutes, seconds;
+
+  let timer = duration;
+  let minutes;
+  let seconds;
+
   setInterval(() => {
+
     minutes = Math.floor(timer / 60);
     seconds = timer % 60;
 
@@ -286,25 +380,37 @@ function startTimer(duration) {
       "⏳ Oferta termina en " + minutes + ":" + seconds;
 
     if (--timer < 0) {
-      timer = duration; // reinicia automáticamente
+
+      timer = duration;
+
     }
+
   }, 1000);
+
 }
 
-// arranca en 15 minutos
+
+// Arranca en 15 minutos
+
 startTimer(900);
 
 
 // 🎞️ CARRUSEL AUTOMÁTICO
+
 let slides = document.querySelectorAll(".slide");
 let index = 0;
 
 setInterval(() => {
+
   slides[index].classList.remove("active");
+
   index = (index + 1) % slides.length;
+
   slides[index].classList.add("active");
+
 }, 3000);
 
 </script>
+
 </body>
 </html>
